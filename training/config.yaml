@@ -1,0 +1,121 @@
+# LLaDA Training Configuration
+
+# Model Configuration
+model:
+  name_or_path: "GSAI-ML/LLaDA-8B-Base"
+  tokenizer_name: null  # defaults to model_name_or_path
+  mask_token_id: 126336
+  max_length: 4096
+  dtype: "bfloat16"
+
+# Pre-training Configuration
+pretraining:
+  train_data_path: "./data/pretrain/train.jsonl"
+  eval_data_path: "./data/pretrain/eval.jsonl"
+  output_dir: "./checkpoints/pretraining"
+  
+  # Training hyperparameters
+  max_steps: 100000
+  batch_size: 4
+  learning_rate: 4e-4
+  min_learning_rate: 1e-5
+  weight_decay: 0.01
+  max_grad_norm: 1.0
+  
+  # Logging and saving
+  log_interval: 100
+  eval_interval: 1000
+  save_interval: 5000
+  
+  # Data loading
+  num_workers: 4
+  
+  # Random seed
+  seed: 42
+
+# SFT Configuration
+sft:
+  train_data_path: "./data/sft/train.jsonl"
+  eval_data_path: "./data/sft/eval.jsonl"
+  output_dir: "./checkpoints/sft"
+  
+  # Training hyperparameters
+  max_steps: 10000
+  batch_size: 4
+  learning_rate: 2e-5
+  min_learning_rate: 1e-6
+  weight_decay: 0.01
+  max_grad_norm: 1.0
+  
+  # Logging and saving
+  log_interval: 50
+  eval_interval: 500
+  save_interval: 1000
+  
+  # Data loading
+  num_workers: 4
+  
+  # Random seed
+  seed: 42
+
+# Inference Configuration
+inference:
+  # Sampling methods: fixed_length, semi_autoregressive_origin, semi_autoregressive_padding
+  default_method: "fixed_length"
+  
+  # Generation parameters
+  gen_length: 128
+  block_length: 32
+  steps: null  # defaults to gen_length
+  temperature: 0.0
+  cfg_scale: 0.0
+  
+  # Remasking strategy: low_confidence, random
+  remasking: "low_confidence"
+
+# Data Format Examples
+data_format:
+  pretraining:
+    description: "Plain text or JSONL with 'text' field"
+    example: |
+      {"text": "This is a sample text for pre-training."}
+      {"text": "Another piece of text for language modeling."}
+  
+  sft:
+    description: "JSONL with conversation format"
+    example: |
+      {
+        "conversations": [
+          {"role": "user", "content": "What is the capital of France?"},
+          {"role": "assistant", "content": "Paris."}
+        ]
+      }
+      {
+        "conversations": [
+          {"role": "user", "content": "Explain quantum physics"},
+          {"role": "assistant", "content": "Quantum physics is the study of matter and energy at the smallest scales..."}
+        ]
+      }
+
+# Hardware Requirements
+hardware:
+  recommended:
+    gpu: "A100 80GB or equivalent"
+    vram: "80GB+"
+    cpu_cores: "32+"
+    ram: "256GB+"
+  
+  minimum:
+    gpu: "RTX 3090 or equivalent"
+    vram: "24GB"
+    cpu_cores: "16"
+    ram: "64GB"
+
+# Performance Tips
+performance_tips:
+  - "Use gradient checkpointing to reduce memory usage"
+  - "Enable mixed precision training (bfloat16)"
+  - "Use gradient accumulation for larger effective batch sizes"
+  - "Monitor GPU memory usage and adjust batch size accordingly"
+  - "Use multiple GPUs with data parallel training"
+  - "Consider using DeepSpeed for very large models"

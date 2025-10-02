@@ -1,0 +1,152 @@
+2025-10-02 14:21:59,832 - WARNING - Xet Storage is enabled for this repo, but the 'hf_xet' package is not installed. Falling back to regular HTTP download. For better performance, install the package with: `pip install huggingface_hub[hf_xet]` or `pip install hf_xet`
+2025-10-02 14:22:28,124 - WARNING - Error while downloading from https://huggingface.co/microsoft/DialoGPT-small/resolve/main/model.safetensors: HTTPSConnectionPool(host='cas-bridge.xethub.hf.co', port=443): Read timed out.
+Trying to resume download...
+2025-10-02 14:26:08,050 - INFO - === LLaDA From-Scratch Training ===
+2025-10-02 14:26:08,050 - INFO - Creating new model and tokenizer from scratch...
+2025-10-02 14:29:13,392 - INFO - === LLaDA Offline Training (No Downloads) ===
+2025-10-02 14:29:13,392 - INFO - Creating tokenizer and model from scratch...
+2025-10-02 14:29:13,536 - INFO - Model created on device: cuda
+2025-10-02 14:29:13,536 - INFO - Model parameters: 4,974,283
+2025-10-02 14:29:13,537 - INFO - Vocabulary size: 203
+2025-10-02 14:29:13,541 - INFO - Loaded 2000 training examples from data\pretrain\train.jsonl
+2025-10-02 14:29:13,542 - INFO - Loaded 200 training examples from data\pretrain\eval.jsonl
+2025-10-02 14:29:14,218 - INFO - Starting LLaDA offline training...
+2025-10-02 14:29:14,218 - INFO - Total steps: 5000
+2025-10-02 14:29:14,218 - INFO - Batch size: 2
+2025-10-02 14:29:14,219 - INFO - Learning rate: 0.0003
+2025-10-02 14:29:14,219 - INFO - Model parameters: 4,974,283
+2025-10-02 14:29:14,219 - INFO - Vocabulary size: 203
+2025-10-02 14:34:38,626 - INFO - === LLaDA Offline Training (No Downloads) ===
+2025-10-02 14:34:38,627 - INFO - Creating tokenizer and model from scratch...
+2025-10-02 14:34:38,789 - INFO - Model created on device: cuda
+2025-10-02 14:34:38,790 - INFO - Model parameters: 4,974,283
+2025-10-02 14:34:38,790 - INFO - Vocabulary size: 203
+2025-10-02 14:34:38,793 - INFO - Loaded 2000 training examples from data\pretrain\train.jsonl
+2025-10-02 14:34:38,794 - INFO - Loaded 200 training examples from data\pretrain\eval.jsonl
+2025-10-02 14:34:39,481 - INFO - Starting LLaDA offline training...
+2025-10-02 14:34:39,482 - INFO - Total steps: 5000
+2025-10-02 14:34:39,482 - INFO - Batch size: 2
+2025-10-02 14:34:39,482 - INFO - Learning rate: 0.0003
+2025-10-02 14:34:39,482 - INFO - Model parameters: 4,974,283
+2025-10-02 14:34:39,482 - INFO - Vocabulary size: 203
+2025-10-02 14:34:40,864 - INFO - Step: 50, Loss: 0.6935, LR: 3.00e-04
+2025-10-02 14:34:41,734 - INFO - Step: 100, Loss: 0.4518, LR: 3.00e-04
+2025-10-02 14:34:42,620 - INFO - Step: 150, Loss: 0.4079, LR: 2.99e-04
+2025-10-02 14:34:43,488 - INFO - Step: 200, Loss: 0.3913, LR: 2.99e-04
+2025-10-02 14:34:44,353 - INFO - Step: 250, Loss: 0.4340, LR: 2.98e-04
+2025-10-02 14:34:45,255 - INFO - Step: 300, Loss: 0.3513, LR: 2.97e-04
+2025-10-02 14:34:46,138 - INFO - Step: 350, Loss: 0.2254, LR: 2.97e-04
+2025-10-02 14:34:47,054 - INFO - Step: 400, Loss: 0.2287, LR: 2.95e-04
+2025-10-02 14:34:47,881 - INFO - Step: 450, Loss: 0.2073, LR: 2.94e-04
+2025-10-02 14:34:48,712 - INFO - Step: 500, Loss: 0.1833, LR: 2.93e-04
+2025-10-02 14:34:49,288 - INFO - Eval Loss: 5.0651
+2025-10-02 14:34:49,514 - INFO - Checkpoint saved to checkpoints\pretraining\checkpoint_step_500.pt
+2025-10-02 14:34:50,380 - INFO - Step: 550, Loss: 0.1706, LR: 2.91e-04
+2025-10-02 14:34:51,264 - INFO - Step: 600, Loss: 0.1504, LR: 2.90e-04
+2025-10-02 14:34:52,092 - INFO - Step: 650, Loss: 0.1419, LR: 2.88e-04
+2025-10-02 14:34:52,966 - INFO - Step: 700, Loss: 0.1710, LR: 2.86e-04
+2025-10-02 14:34:53,830 - INFO - Step: 750, Loss: 0.1298, LR: 2.84e-04
+2025-10-02 14:34:54,733 - INFO - Step: 800, Loss: 0.1742, LR: 2.82e-04
+2025-10-02 14:34:55,559 - INFO - Step: 850, Loss: 0.1438, LR: 2.80e-04
+2025-10-02 14:34:56,396 - INFO - Step: 900, Loss: 0.1506, LR: 2.77e-04
+2025-10-02 14:34:57,219 - INFO - Step: 950, Loss: 0.1490, LR: 2.75e-04
+2025-10-02 14:34:58,110 - INFO - Step: 1000, Loss: 0.1504, LR: 2.72e-04
+2025-10-02 14:34:58,682 - INFO - Eval Loss: 4.7851
+2025-10-02 14:34:58,823 - INFO - Checkpoint saved to checkpoints\pretraining\checkpoint_step_1000.pt
+2025-10-02 14:34:58,896 - INFO - Checkpoint saved to checkpoints\pretraining\checkpoint_step_1000.pt
+2025-10-02 14:34:59,751 - INFO - Step: 1050, Loss: 0.1259, LR: 2.70e-04
+2025-10-02 14:35:00,665 - INFO - Step: 1100, Loss: 0.1079, LR: 2.67e-04
+2025-10-02 14:35:01,556 - INFO - Step: 1150, Loss: 0.1178, LR: 2.64e-04
+2025-10-02 14:35:02,441 - INFO - Step: 1200, Loss: 0.1209, LR: 2.61e-04
+2025-10-02 14:35:03,342 - INFO - Step: 1250, Loss: 0.1132, LR: 2.58e-04
+2025-10-02 14:35:04,308 - INFO - Step: 1300, Loss: 0.1146, LR: 2.54e-04
+2025-10-02 14:35:05,158 - INFO - Step: 1350, Loss: 0.0877, LR: 2.51e-04
+2025-10-02 14:35:05,986 - INFO - Step: 1400, Loss: 0.1014, LR: 2.47e-04
+2025-10-02 14:35:06,820 - INFO - Step: 1450, Loss: 0.0951, LR: 2.44e-04
+2025-10-02 14:35:07,652 - INFO - Step: 1500, Loss: 0.0813, LR: 2.40e-04
+2025-10-02 14:35:08,143 - INFO - Eval Loss: 4.7672
+2025-10-02 14:35:08,328 - INFO - Checkpoint saved to checkpoints\pretraining\checkpoint_step_1500.pt
+2025-10-02 14:35:09,231 - INFO - Step: 1550, Loss: 0.0878, LR: 2.37e-04
+2025-10-02 14:35:10,166 - INFO - Step: 1600, Loss: 0.0731, LR: 2.33e-04
+2025-10-02 14:35:11,074 - INFO - Step: 1650, Loss: 0.0687, LR: 2.29e-04
+2025-10-02 14:35:11,969 - INFO - Step: 1700, Loss: 0.0641, LR: 2.25e-04
+2025-10-02 14:35:12,858 - INFO - Step: 1750, Loss: 0.0681, LR: 2.21e-04
+2025-10-02 14:35:13,752 - INFO - Step: 1800, Loss: 0.0768, LR: 2.17e-04
+2025-10-02 14:35:14,689 - INFO - Step: 1850, Loss: 0.0724, LR: 2.13e-04
+2025-10-02 14:35:15,572 - INFO - Step: 1900, Loss: 0.0722, LR: 2.08e-04
+2025-10-02 14:35:16,553 - INFO - Step: 1950, Loss: 0.0505, LR: 2.04e-04
+2025-10-02 14:35:17,524 - INFO - Step: 2000, Loss: 0.0656, LR: 2.00e-04
+2025-10-02 14:35:18,209 - INFO - Eval Loss: 4.7486
+2025-10-02 14:35:18,432 - INFO - Checkpoint saved to checkpoints\pretraining\checkpoint_step_2000.pt
+2025-10-02 14:35:18,513 - INFO - Checkpoint saved to checkpoints\pretraining\checkpoint_step_2000.pt
+2025-10-02 14:35:19,579 - INFO - Step: 2050, Loss: 0.0804, LR: 1.95e-04
+2025-10-02 14:35:20,676 - INFO - Step: 2100, Loss: 0.0496, LR: 1.91e-04
+2025-10-02 14:35:21,775 - INFO - Step: 2150, Loss: 0.0331, LR: 1.87e-04
+2025-10-02 14:35:22,872 - INFO - Step: 2200, Loss: 0.0434, LR: 1.82e-04
+2025-10-02 14:35:23,819 - INFO - Step: 2250, Loss: 0.0529, LR: 1.78e-04
+2025-10-02 14:35:24,695 - INFO - Step: 2300, Loss: 0.0545, LR: 1.73e-04
+2025-10-02 14:35:25,635 - INFO - Step: 2350, Loss: 0.0370, LR: 1.69e-04
+2025-10-02 14:35:26,475 - INFO - Step: 2400, Loss: 0.0538, LR: 1.64e-04
+2025-10-02 14:35:27,392 - INFO - Step: 2450, Loss: 0.0479, LR: 1.60e-04
+2025-10-02 14:35:28,310 - INFO - Step: 2500, Loss: 0.0424, LR: 1.55e-04
+2025-10-02 14:35:28,858 - INFO - Eval Loss: 4.5987
+2025-10-02 14:35:29,047 - INFO - Checkpoint saved to checkpoints\pretraining\checkpoint_step_2500.pt
+2025-10-02 14:35:29,931 - INFO - Step: 2550, Loss: 0.0359, LR: 1.50e-04
+2025-10-02 14:35:30,824 - INFO - Step: 2600, Loss: 0.0742, LR: 1.46e-04
+2025-10-02 14:35:31,693 - INFO - Step: 2650, Loss: 0.0424, LR: 1.41e-04
+2025-10-02 14:35:32,584 - INFO - Step: 2700, Loss: 0.0425, LR: 1.37e-04
+2025-10-02 14:35:33,454 - INFO - Step: 2750, Loss: 0.0484, LR: 1.32e-04
+2025-10-02 14:35:34,331 - INFO - Step: 2800, Loss: 0.0341, LR: 1.28e-04
+2025-10-02 14:35:35,266 - INFO - Step: 2850, Loss: 0.0325, LR: 1.23e-04
+2025-10-02 14:35:36,171 - INFO - Step: 2900, Loss: 0.0480, LR: 1.19e-04
+2025-10-02 14:35:37,101 - INFO - Step: 2950, Loss: 0.0388, LR: 1.15e-04
+2025-10-02 14:35:37,994 - INFO - Step: 3000, Loss: 0.0333, LR: 1.10e-04
+2025-10-02 14:35:38,529 - INFO - Eval Loss: 4.6320
+2025-10-02 14:35:38,626 - INFO - Checkpoint saved to checkpoints\pretraining\checkpoint_step_3000.pt
+2025-10-02 14:35:39,529 - INFO - Step: 3050, Loss: 0.0279, LR: 1.06e-04
+2025-10-02 14:35:40,420 - INFO - Step: 3100, Loss: 0.0338, LR: 1.02e-04
+2025-10-02 14:35:41,281 - INFO - Step: 3150, Loss: 0.0357, LR: 9.74e-05
+2025-10-02 14:35:42,176 - INFO - Step: 3200, Loss: 0.0293, LR: 9.33e-05
+2025-10-02 14:35:43,056 - INFO - Step: 3250, Loss: 0.0278, LR: 8.92e-05
+2025-10-02 14:35:43,935 - INFO - Step: 3300, Loss: 0.0287, LR: 8.51e-05
+2025-10-02 14:35:44,853 - INFO - Step: 3350, Loss: 0.0337, LR: 8.12e-05
+2025-10-02 14:35:45,752 - INFO - Step: 3400, Loss: 0.0279, LR: 7.73e-05
+2025-10-02 14:35:46,590 - INFO - Step: 3450, Loss: 0.0307, LR: 7.35e-05
+2025-10-02 14:35:47,429 - INFO - Step: 3500, Loss: 0.0324, LR: 6.98e-05
+2025-10-02 14:35:47,948 - INFO - Eval Loss: 4.6722
+2025-10-02 14:35:48,808 - INFO - Step: 3550, Loss: 0.0265, LR: 6.61e-05
+2025-10-02 14:35:49,642 - INFO - Step: 3600, Loss: 0.0255, LR: 6.26e-05
+2025-10-02 14:35:50,483 - INFO - Step: 3650, Loss: 0.0282, LR: 5.91e-05
+2025-10-02 14:35:51,300 - INFO - Step: 3700, Loss: 0.0178, LR: 5.57e-05
+2025-10-02 14:35:52,121 - INFO - Step: 3750, Loss: 0.0278, LR: 5.25e-05
+2025-10-02 14:35:52,959 - INFO - Step: 3800, Loss: 0.0273, LR: 4.93e-05
+2025-10-02 14:35:53,883 - INFO - Step: 3850, Loss: 0.0296, LR: 4.62e-05
+2025-10-02 14:35:54,746 - INFO - Step: 3900, Loss: 0.0272, LR: 4.33e-05
+2025-10-02 14:35:55,574 - INFO - Step: 3950, Loss: 0.0322, LR: 4.04e-05
+2025-10-02 14:35:56,406 - INFO - Step: 4000, Loss: 0.0216, LR: 3.77e-05
+2025-10-02 14:35:56,912 - INFO - Eval Loss: 4.6396
+2025-10-02 14:35:56,992 - INFO - Checkpoint saved to checkpoints\pretraining\checkpoint_step_4000.pt
+2025-10-02 14:35:57,877 - INFO - Step: 4050, Loss: 0.0231, LR: 3.51e-05
+2025-10-02 14:35:58,844 - INFO - Step: 4100, Loss: 0.0243, LR: 3.26e-05
+2025-10-02 14:35:59,869 - INFO - Step: 4150, Loss: 0.0271, LR: 3.02e-05
+2025-10-02 14:36:00,889 - INFO - Step: 4200, Loss: 0.0245, LR: 2.79e-05
+2025-10-02 14:36:01,958 - INFO - Step: 4250, Loss: 0.0263, LR: 2.58e-05
+2025-10-02 14:36:02,985 - INFO - Step: 4300, Loss: 0.0246, LR: 2.38e-05
+2025-10-02 14:36:03,913 - INFO - Step: 4350, Loss: 0.0232, LR: 2.19e-05
+2025-10-02 14:36:04,778 - INFO - Step: 4400, Loss: 0.0286, LR: 2.02e-05
+2025-10-02 14:36:05,635 - INFO - Step: 4450, Loss: 0.0231, LR: 1.86e-05
+2025-10-02 14:36:06,514 - INFO - Step: 4500, Loss: 0.0166, LR: 1.71e-05
+2025-10-02 14:36:07,030 - INFO - Eval Loss: 4.6422
+2025-10-02 14:36:07,969 - INFO - Step: 4550, Loss: 0.0220, LR: 1.58e-05
+2025-10-02 14:36:08,850 - INFO - Step: 4600, Loss: 0.0184, LR: 1.46e-05
+2025-10-02 14:36:09,737 - INFO - Step: 4650, Loss: 0.0261, LR: 1.35e-05
+2025-10-02 14:36:10,771 - INFO - Step: 4700, Loss: 0.0174, LR: 1.26e-05
+2025-10-02 14:36:11,799 - INFO - Step: 4750, Loss: 0.0192, LR: 1.18e-05
+2025-10-02 14:36:12,736 - INFO - Step: 4800, Loss: 0.0205, LR: 1.11e-05
+2025-10-02 14:36:13,674 - INFO - Step: 4850, Loss: 0.0124, LR: 1.06e-05
+2025-10-02 14:36:14,555 - INFO - Step: 4900, Loss: 0.0296, LR: 1.03e-05
+2025-10-02 14:36:15,438 - INFO - Step: 4950, Loss: 0.0189, LR: 1.01e-05
+2025-10-02 14:36:16,321 - INFO - Step: 5000, Loss: 0.0235, LR: 1.00e-05
+2025-10-02 14:36:16,855 - INFO - Eval Loss: 4.6190
+2025-10-02 14:36:16,951 - INFO - Checkpoint saved to checkpoints\pretraining\checkpoint_step_5000.pt
+2025-10-02 14:36:16,951 - INFO - Training completed!

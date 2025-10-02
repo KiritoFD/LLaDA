@@ -1,0 +1,103 @@
+# LLaDA Windows From-Scratch Training Configuration
+
+# Model Configuration for Windows (smaller, more manageable)
+model:
+  name_or_path: "microsoft/DialoGPT-small"  # Smaller base model for Windows
+  tokenizer_name: null  # defaults to model_name_or_path
+  max_length: 1024      # Reduced for memory constraints
+  dtype: "float16"      # Use float16 to save memory
+
+# Pre-training Configuration
+pretraining:
+  train_data_path: "./data/pretrain/train.jsonl"
+  eval_data_path: "./data/pretrain/eval.jsonl"
+  output_dir: "./checkpoints/pretraining"
+  
+  # Training hyperparameters (reduced for Windows)
+  max_steps: 10000      # Reduced for demonstration
+  batch_size: 2         # Small batch size for limited GPU memory
+  learning_rate: 3e-4
+  min_learning_rate: 1e-5
+  weight_decay: 0.01
+  max_grad_norm: 1.0
+  
+  # Logging and saving (more frequent for shorter training)
+  log_interval: 50
+  eval_interval: 500
+  save_interval: 1000
+  
+  # Data loading (0 workers for Windows compatibility)
+  num_workers: 0
+  
+  # Random seed
+  seed: 42
+
+# SFT Configuration
+sft:
+  train_data_path: "./data/sft/train.jsonl"
+  eval_data_path: "./data/sft/eval.jsonl"
+  output_dir: "./checkpoints/sft"
+  
+  # Training hyperparameters
+  max_steps: 2000       # Short SFT for demonstration
+  batch_size: 2
+  learning_rate: 2e-5
+  min_learning_rate: 1e-6
+  weight_decay: 0.01
+  max_grad_norm: 1.0
+  
+  # Logging and saving
+  log_interval: 25
+  eval_interval: 200
+  save_interval: 400
+  
+  # Data loading
+  num_workers: 0
+  
+  # Random seed
+  seed: 42
+
+# Inference Configuration
+inference:
+  # Sampling methods
+  default_method: "fixed_length"
+  
+  # Generation parameters (reduced for faster inference)
+  gen_length: 64
+  block_length: 16
+  steps: 64
+  temperature: 0.0
+  cfg_scale: 0.0
+  
+  # Remasking strategy
+  remasking: "low_confidence"
+
+# Windows-specific considerations
+windows_optimizations:
+  use_float16: true           # Save memory
+  enable_cpu_fallback: true   # Use CPU if GPU memory is insufficient
+  reduce_sequence_length: true # Use shorter sequences
+  frequent_checkpointing: true # Save progress more often
+
+# Hardware Requirements for Windows
+hardware_requirements:
+  minimum:
+    gpu: "GTX 1660 or better (6GB VRAM)"
+    cpu: "4 cores"
+    ram: "16GB"
+    storage: "10GB free space"
+  
+  recommended:
+    gpu: "RTX 3060 or better (12GB VRAM)"
+    cpu: "8 cores"
+    ram: "32GB"
+    storage: "50GB free space"
+
+# Training Tips for Windows
+training_tips:
+  - "Close other applications to free up GPU memory"
+  - "Monitor GPU temperature and usage"
+  - "Use Task Manager to monitor CPU and RAM usage"
+  - "Consider training overnight for longer runs"
+  - "Save checkpoints frequently in case of interruption"
+  - "Use reduced batch size if out of memory errors occur"
