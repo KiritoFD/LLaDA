@@ -63,6 +63,24 @@ We provide guidelines for the pre-training and SFT of LLaDA in [GUIDELINES.md](G
 You can also refer to [SMDM](https://github.com/ML-GSAI/SMDM), which has a similar training process to LLaDA 
 and has open-sourced the training framework.
 
+### Offline QA dataset preparation
+
+The repository now includes a helper script for converting textbook-style material into
+question-answer supervision data. To transform the provided `xad.txt` exercises into a
+JSONL dataset that can be used for instruction tuning, run:
+
+```powershell
+python training\prepare_xad_qa_dataset.py --source xad.txt --output data\xad_qa.jsonl
+```
+
+Key arguments:
+- `--top_k`: number of context chunks to attach per question (default `2`).
+- `--max_answer_sentences`: maximum answer sentences taken from each chunk (default `2`).
+- `--max_context_chars`: optional character limit for the aggregated context.
+
+The resulting JSONL file contains one sample per exercise with the fields `question`,
+`answer`, `context`, `chapter`, and `section`.
+
 ## Evaluation
 
 We use two evaluation methods: conditional likelihood estimation and conditional generation. For the base model, conditional likelihood estimation is applied to specific metrics and conditional generation to the rest. For the Instruct model, conditional generation is used for all metrics.
